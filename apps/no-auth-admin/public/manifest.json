@@ -1,6 +1,6 @@
 {
-  "short_name": "no-auth",
-  "name": "no-auth",
+  "short_name": "no auth",
+  "name": "no auth",
   "icons": [
     {
       "src": "favicon.ico",
