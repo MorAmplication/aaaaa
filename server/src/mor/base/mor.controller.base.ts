@@ -52,6 +52,7 @@ export class MorControllerBase {
       select: {
         createdAt: true,
         id: true,
+        test: true,
         updatedAt: true,
         username: true,
         roles: true,
@@ -78,6 +79,7 @@ export class MorControllerBase {
       select: {
         createdAt: true,
         id: true,
+        test: true,
         updatedAt: true,
         username: true,
         roles: true,
@@ -105,6 +107,7 @@ export class MorControllerBase {
       select: {
         createdAt: true,
         id: true,
+        test: true,
         updatedAt: true,
         username: true,
         roles: true,
@@ -141,6 +144,7 @@ export class MorControllerBase {
         select: {
           createdAt: true,
           id: true,
+          test: true,
           updatedAt: true,
           username: true,
           roles: true,
@@ -176,6 +180,7 @@ export class MorControllerBase {
         select: {
           createdAt: true,
           id: true,
+          test: true,
           updatedAt: true,
           username: true,
           roles: true,
