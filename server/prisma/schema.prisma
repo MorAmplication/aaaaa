@@ -1,4 +1,4 @@
-datasource postgres {
+datasource db {
   provider = "postgresql"
   url      = env("DB_URL")
 }
@@ -12,8 +12,32 @@ model User {
   firstName String?
   id        String   @id @default(cuid())
   lastName  String?
+  nlnb      String?
   password  String
   roles     Json
   updatedAt DateTime @updatedAt
   username  String   @unique
+}
+
+model Mor {
+  createdAt DateTime @default(now())
+  id        String   @id @default(cuid())
+  updatedAt DateTime @updatedAt
+  username  String   @unique
+  password  String
+  roles     Json
+}
+
+model PolicyApproval {
+  createdAt DateTime                @default(now())
+  eeee      String?
+  id        String                  @id @default(cuid())
+  newField  String?
+  test      EnumPolicyApprovalTest?
+  updatedAt DateTime                @updatedAt
+}
+
+enum EnumPolicyApprovalTest {
+  red
+  green
 }
