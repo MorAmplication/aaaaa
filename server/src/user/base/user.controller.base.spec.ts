@@ -23,6 +23,7 @@ const CREATE_INPUT = {
   firstName: "exampleFirstName",
   id: "exampleId",
   lastName: "exampleLastName",
+  nlnb: "exampleNlnb",
   password: "examplePassword",
   updatedAt: new Date(),
   username: "exampleUsername",
@@ -32,6 +33,7 @@ const CREATE_RESULT = {
   firstName: "exampleFirstName",
   id: "exampleId",
   lastName: "exampleLastName",
+  nlnb: "exampleNlnb",
   password: "examplePassword",
   updatedAt: new Date(),
   username: "exampleUsername",
@@ -42,6 +44,7 @@ const FIND_MANY_RESULT = [
     firstName: "exampleFirstName",
     id: "exampleId",
     lastName: "exampleLastName",
+    nlnb: "exampleNlnb",
     password: "examplePassword",
     updatedAt: new Date(),
     username: "exampleUsername",
@@ -52,6 +55,7 @@ const FIND_ONE_RESULT = {
   firstName: "exampleFirstName",
   id: "exampleId",
   lastName: "exampleLastName",
+  nlnb: "exampleNlnb",
   password: "examplePassword",
   updatedAt: new Date(),
   username: "exampleUsername",
@@ -180,7 +184,7 @@ describe("User", () => {
   });
 
   test("POST /users existing resource", async () => {
-    let agent = request(app.getHttpServer());
+    const agent = request(app.getHttpServer());
     await agent
       .post("/users")
       .send(CREATE_INPUT)
